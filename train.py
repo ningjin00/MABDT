@@ -3,7 +3,7 @@ import sys
 import torch
 import argparse
 from tqdm import tqdm
-from models.my_model import Model as EMPFNet
+from models.mabdt import Model as EMPFNet
 import torch.optim as optim
 import torch.nn.functional as F
 from losses.perceptual import LossNetwork
