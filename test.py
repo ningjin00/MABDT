@@ -3,7 +3,7 @@ import sys
 import torch
 import argparse
 from tqdm import tqdm
-from models.my_model import Model as EMPFNet
+from models.mabdt import Model as EMPFNet
 from utils.utils import expand2square
 import torch.nn.functional as F
 from pytorch_msssim import ssim
