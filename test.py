@@ -3,7 +3,7 @@ import sys
 import torch
 import argparse
 from tqdm import tqdm
-from models.mabdt import Model as EMPFNet
+from models.mabdt import Model as MABDT
 from utils.utils import expand2square
 import torch.nn.functional as F
 from pytorch_msssim import ssim
@@ -14,7 +14,7 @@ from torchvision.utils import save_image
 
 def test(args):
 
-    model_restoration = EMPFNet().cuda() if args.cuda else EMPFNet()
+    model_restoration = MABDT().cuda() if args.cuda else MABDT()
 
     path_val_input, path_val_target = args.val_data + '/hazy/', args.val_data + '/clear/'
     datasetTest = MyTestDataSet(path_val_input, path_val_target)
