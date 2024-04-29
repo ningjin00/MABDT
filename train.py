@@ -3,7 +3,7 @@ import sys
 import torch
 import argparse
 from tqdm import tqdm
-from models.mabdt import Model as EMPFNet
+from models.mabdt import Model as MABDT
 import torch.optim as optim
 import torch.nn.functional as F
 from losses.perceptual import LossNetwork
@@ -31,7 +31,7 @@ def train(args):
     loss_network = LossNetwork(vgg_model)
     loss_network.eval()
     # model
-    model_restoration = EMPFNet().cuda() if args.cuda else EMPFNet()
+    model_restoration = MABDT().cuda() if args.cuda else MABDT()
     # optimizer
     new_lr = args.lr
     optimizer = optim.Adam(model_restoration.parameters(), lr=new_lr)
