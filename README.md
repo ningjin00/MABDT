@@ -16,11 +16,11 @@ opencv-python 4.8.1.78
 ### Demo
 Kindly access the pre-trained models of our MABDT through the provided links for download.
 
-| Dataset           | Link                                                         | Dataset              | Link                                                         |
-| ----------------- | ------------------------------------------------------------ | -------------------- | ------------------------------------------------------------ |
-| StateHaze1K-thick | [[Baidu Cloud](https://pan.baidu.com/s/1ka78xdfXE1DHwQhvHeO4sQ), code: rsid]   [[Google Drive](https://drive.google.com/file/d/1UryeNoDfF9VYC-OM9ySGEoFuICfgOzqI/view?usp=sharing)] | StateHaze1K-moderate | [[Baidu Cloud](https://pan.baidu.com/s/1qYAC3fZmojMoJcx_1mmP1A), code: rsid]   [[Google Drive](https://drive.google.com/file/d/1qSiFiBTIdjBWPtiJHDEjsQkpcceCzFpA/view?usp=sharing)] |
-| StateHaze1K-thin  | [[Baidu Cloud](https://pan.baidu.com/s/15JdjFfkmpAQQxoWH0K2skQ), code: rsid]   [[Google Drive](https://drive.google.com/file/d/1oOUrEj9jEG0tvxvLhzBdP8cCDErp0Ult/view?usp=sharing)] | RICE1                | [[Baidu Cloud](https://pan.baidu.com/s/1MVDapqY6ZsFDM1OuwgVruA), code: rsid]   [[Google Drive](https://drive.google.com/file/d/13k5bLCaKirrG4QUm2HnQRC_ihAPK8JSA/view?usp=sharing)] |
-| RICE2             | [[Baidu Cloud](https://pan.baidu.com/s/1gytFQlWuMjYAV9qlZpb0Mw), code: rsid]   [[Google Drive](https://drive.google.com/file/d/1pomHZNaBq6G8wGVKBL2iirXnZFbXj_8D/view?usp=sharing)] |                      |                                                              |
+| Dataset           | Link                      | Dataset              | Link                      |
+| ----------------- | ------------------------- | -------------------- | ------------------------- |
+| StateHaze1K-thick | [[Baidu Cloud](), code: ] | StateHaze1K-moderate | [[Baidu Cloud](), code: ] |
+| StateHaze1K-thin  | [[Baidu Cloud](), code: ] | RICE1                | [[Baidu Cloud](), code: ] |
+| RICE2             | [[Baidu Cloud](), code: ] |                      |                           |
 
 Once you have downloaded the models, you can process a remote sensing hazy image using the following example usage.
 ```python
