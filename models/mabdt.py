@@ -25,9 +25,9 @@ class CALayer(nn.Module):
         super(CALayer, self).__init__()
         self.avg_pool = nn.AdaptiveAvgPool2d(1)
         self.ca = nn.Sequential(
-                nn.Conv2d(channel, channel // 8, 1, padding=0, bias=False),
+                nn.Conv2d(channel, channel // 8, 1, padding=0, bias=True),
                 nn.ReLU(inplace=False),
-                nn.Conv2d(channel // 8, channel, 1, padding=0, bias=False),
+                nn.Conv2d(channel // 8, channel, 1, padding=0, bias=True),
                 nn.Sigmoid()
         )
 
@@ -158,6 +158,7 @@ class MFF(nn.Module):
         return j
 
 #ADTB
+#https://github.com/AshutoshKulkarni4998/AIDTransformer
 class TRANSFORMER_BLOCK(nn.Module):
     def __init__(self, dim, input_resolution, depth, num_heads, win_size,
                  mlp_ratio=4., qkv_bias=True, qk_scale=None, drop=0., attn_drop=0.,
