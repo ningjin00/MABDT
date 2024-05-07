@@ -13,7 +13,7 @@ timm 0.9.12
 tqdm 4.66.1
 opencv-python 4.8.1.78
 ```
-### Pre-trained models
+### Models
 Kindly access the pre-trained models of our MABDT through the provided links for download.
 
 | Dataset           | Link                                                         | Dataset              | Link                                                         |
@@ -22,16 +22,23 @@ Kindly access the pre-trained models of our MABDT through the provided links for
 | StateHaze1K-thin  | [[Baidu Cloud](), code: ]                                    | RICE1                | [[Baidu Cloud](https://pan.baidu.com/s/1XrgP-h3FIpomUSjNgt9oeQ), code: 7sik] |
 | RICE2             | [[Baidu Cloud](https://pan.baidu.com/s/1lRg6dO1LK5277R0gltWSmg), code: 94h8] |                      |                                                              |
 
+Once you have downloaded the models, you can process a remote sensing hazy image using the following example usage.
+
+```python
+python demo.py --input_image ./data/hazy/1.png --target_image ./data/clear/1.png --result_dir ./data/result --expand_factor 128 --result_save True --resume_state ./Haze1k_moderate/model_best.pth --only_last True --cuda True
+```
+
 ### Train
+
 For those who wish to perform rapid training on their custom datasets, we provide a straightforward training code in the `train.py` file, enabling training of our MABDT. Please refer to the example usage within the file to train the model on your datasets.
 ```python
-python train.py --seed 2023 --epoch 100 --batch_size_train 1 --batch_size_val 1 --patch_size_train 256 --patch_size_val 256 --lr 2e-4 --lr_min 1e-8 --train_data ./StateHaze1K-thick/hazy --val_data ./StateHaze1K-thick/clear --resume_state ./model_latest.pth --save_state ./model_best.pth --cuda True --val_frequency 1 --lp_weight 0.05 --lg_weight 0.08 --only_last False --autocast True --num_works 1
+python train.py --seed 2023 --epoch 100 --batch_size_train 1 --batch_size_val 1 --patch_size_train 256 --patch_size_val 256 --lr 2e-4 --lr_min 1e-8 --train_data ./Haze1k_thick/hazy --val_data ./Haze1k_thick/clear --resume_state ./model_latest.pth --save_state ./model_best.pth --cuda True --val_frequency 1 --lp_weight 0.05 --lg_weight 0.08 --only_last False --autocast True --num_works 1
 ```
 ### Test
 To evaluate our EMPF-Net on your own datasets or publicly available datasets, you can utilize the following example usage to conduct experiments.
 
 ```python
-python test.py --val_data ./Haze1k_thick/hazy --result_dir ./Haze1k_thick/test/result/ --resume_state ./models/Haze1K-thick.pth --expand_factor 128 --result_save True --cuda True --only_last True --num_works 1
+python test.py --val_data ./Haze1k_thick/hazy --result_dir ./Haze1k_thick/test/result/ --resume_state ./Haze1k_thick/model_best.pth --expand_factor 128 --result_save True --cuda True --only_last True --num_works 1
 ```
 ### Citation
 
