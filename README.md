@@ -13,19 +13,15 @@ timm 0.9.12
 tqdm 4.66.1
 opencv-python 4.8.1.78
 ```
-### Demo
+### Pre-trained models
 Kindly access the pre-trained models of our MABDT through the provided links for download.
 
-| Dataset           | Link                      | Dataset              | Link                      |
-| ----------------- | ------------------------- | -------------------- | ------------------------- |
-| StateHaze1K-thick | [[Baidu Cloud](), code: ] | StateHaze1K-moderate | [[Baidu Cloud](), code: ] |
-| StateHaze1K-thin  | [[Baidu Cloud](), code: ] | RICE1                | [[Baidu Cloud](), code: ] |
-| RICE2             | [[Baidu Cloud](), code: ] |                      |                           |
+| Dataset           | Link                                                         | Dataset              | Link                                                         |
+| ----------------- | ------------------------------------------------------------ | -------------------- | ------------------------------------------------------------ |
+| StateHaze1K-thick | [[Baidu Cloud](https://pan.baidu.com/s/1UEQgzQY0mFUIbyjpSAZdgg), code: 7fkg] | StateHaze1K-moderate | [[Baidu Cloud](https://pan.baidu.com/s/1EE9zRgTdmtUCCvBKVNbIow), code: dvqj] |
+| StateHaze1K-thin  | [[Baidu Cloud](), code: ]                                    | RICE1                | [[Baidu Cloud](https://pan.baidu.com/s/1XrgP-h3FIpomUSjNgt9oeQ), code: 7sik] |
+| RICE2             | [[Baidu Cloud](https://pan.baidu.com/s/1lRg6dO1LK5277R0gltWSmg), code: 94h8] |                      |                                                              |
 
-Once you have downloaded the models, you can process a remote sensing hazy image using the following example usage.
-```python
-python demo.py --input_image ./data/hazy/0001.png --target_image ./data/clear/0001.png --result_dir ./data/result --expand_factor 128 --result_save True --resume_state ./models/RS-Haze.pth --only_last True --cuda True
-```
 ### Train
 For those who wish to perform rapid training on their custom datasets, we provide a straightforward training code in the `train.py` file, enabling training of our MABDT. Please refer to the example usage within the file to train the model on your datasets.
 ```python
@@ -37,10 +33,6 @@ To evaluate our EMPF-Net on your own datasets or publicly available datasets, yo
 ```python
 python test.py --val_data ./Haze1k_thick/hazy --result_dir ./Haze1k_thick/test/result/ --resume_state ./models/Haze1K-thick.pth --expand_factor 128 --result_save True --cuda True --only_last True --num_works 1
 ```
-### Dataset
-
-If you intend to conduct experiments on our collected real-world remote sensing hazy dataset, named RRSD300, please download it from [[Baidu Cloud](https://pan.baidu.com/s/1lM9vEvDwgDrCoyPJAW490A), code: rsid] or [[Google Drive](https://drive.google.com/file/d/198dmAL5Vrw1qm_f5t4nW8l1Jmw-HNLuy/view?usp=sharing)].
-
 ### Citation
 
 If you find our work helpful for your research, please consider citing our work following this.
@@ -51,4 +43,4 @@ If you find our work helpful for your research, please consider citing our work 
 
 ### Contact  us
 
-If I have any inquiries or questions regarding our work, please feel free to contact us at [wyb@chd.edu.cn](mailto:wyb@chd.edu.cn).
+If I have any inquiries or questions regarding our work, please feel free to contact us at [ningjin@cdut.edu.cn](ningjin@cdut.edu.cn).
