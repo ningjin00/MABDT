@@ -7,7 +7,7 @@ from models.mabdt import Model as MABDT
 from utils.utils import expand2square
 import torch.nn.functional as F
 from pytorch_msssim import ssim
-from datasets import MyTestDataSet
+from datasets.datasets import MyTestDataSet
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
 
@@ -72,9 +72,9 @@ def test(args):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--val_data', type=str, default='D:\dataset_GRS\RICE1\\test')
+    parser.add_argument('--val_data', type=str, default='D:\dataset_GRS\Haze1k_moderate\\test')
     parser.add_argument('--result_dir', type=str, default='E:\output_GRS\experience\Test')
-    parser.add_argument('--resume_state', type=str, default='./RICE1_DF/model_best.pth')
+    parser.add_argument('--resume_state', type=str, default='./Haze1k_moderate/model_best.pth')
     parser.add_argument('--expand_factor', type=int, default=128, help='expand input to a square multiplier')
     parser.add_argument('--result_save', type=bool, default=True, help='wether to save the result')
     parser.add_argument('--cuda', type=bool, default=True)
