@@ -19,7 +19,7 @@ Kindly access the pre-trained models of our MABDT through the provided links for
 | Dataset           | Link                                                         | Dataset              | Link                                                         |
 | ----------------- | ------------------------------------------------------------ | -------------------- | ------------------------------------------------------------ |
 | StateHaze1K-thick | [[Baidu Cloud](https://pan.baidu.com/s/1UEQgzQY0mFUIbyjpSAZdgg), code: 7fkg] | StateHaze1K-moderate | [[Baidu Cloud](https://pan.baidu.com/s/1EE9zRgTdmtUCCvBKVNbIow), code: dvqj] |
-| StateHaze1K-thin  | [[Baidu Cloud](), code: ]                                    | RICE1                | [[Baidu Cloud](https://pan.baidu.com/s/1XrgP-h3FIpomUSjNgt9oeQ), code: 7sik] |
+| StateHaze1K-thin  | [[Baidu Cloud](https://pan.baidu.com/s/19GYjqnnCeS_OPZ6Rt7DPLQ), code: pfe9] | RICE1                | [[Baidu Cloud](https://pan.baidu.com/s/1XrgP-h3FIpomUSjNgt9oeQ), code: 7sik] |
 | RICE2             | [[Baidu Cloud](https://pan.baidu.com/s/1lRg6dO1LK5277R0gltWSmg), code: 94h8] |                      |                                                              |
 
 Once you have downloaded the models, you can process a remote sensing hazy image using the following example usage.
