@@ -45,7 +45,17 @@ python test.py --val_data ./Haze1k_thick/hazy --result_dir ./Haze1k_thick/test/r
 If you find our work helpful for your research, please consider citing our work following this.
 
 ```python
-
+@article{NING2025109768,
+title = {MABDT: Multi-scale attention boosted deformable transformer for remote sensing image dehazing},
+journal = {Signal Processing},
+volume = {229},
+pages = {109768},
+year = {2025},
+issn = {0165-1684},
+doi = {https://doi.org/10.1016/j.sigpro.2024.109768},
+url = {https://www.sciencedirect.com/science/article/pii/S0165168424003888},
+author = {Jin Ning and Jie Yin and Fei Deng and Lianbin Xie}
+}
 ```
 
 ### Contact  us
